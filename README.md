@@ -1,54 +1,40 @@
-##👋 Bonjour, je suis Marion
+# 👋 Hi, I'm Marion
 
-Cloud & DevOps Engineer chez Capgemini, spécialisée dans l'administration système, l'automatisation des opérations et l'observabilité.
-Après une reconversion vers les métiers du DevOps en 2023, j'évolue aujourd'hui sur des environnements Windows et Linux complexes, où j'interviens sur l'intégration applicative, l'automatisation de tâches d'exploitation et l'amélioration du monitoring.
+Cloud & DevOps Engineer at Capgemini, specialized in system administration, operations automation and observability.
 
-🚀 Ce que vous trouverez ici
+After transitioning to a DevOps career path in 2023, I now work in complex Windows and Linux environments, focusing on application integration, automation of operational tasks, and monitoring improvements.
 
-Ce dépôt regroupe des projets personnels et des démonstrateurs techniques inspirés de problématiques réelles rencontrées en environnement d'entreprise.
+---
 
-L'objectif n'est pas de reproduire des environnements clients mais d'illustrer ma façon de travailler :
+## 🚀 What You'll Find Here
 
-automatisation de tâches d'administration ;
-développement de scripts PowerShell ;
-création de playbooks Ansible ;
-supervision et observabilité ;
+This repository contains personal projects and technical demonstrations inspired by real-world challenges encountered in enterprise environments.
 
-🛠️ Technologies
-Automatisation
-PowerShell
-Ansible
-Active Directory
+The goal is not to reproduce client environments but to showcase my technical approach and areas of expertise:
 
-🎯 Ce qui m'intéresse
+- Administration task automation
+- PowerShell scripting
+- Ansible playbook development
+- Monitoring and observability
+- Windows system administration
+- Linux administration
 
-Je m'intéresse particulièrement aux sujets suivants :
+---
 
-Infrastructure as Code
-Automatisation des opérations
-Observabilité
-Scripting PowerShell
-Administration Windows
-Linux
-Plateformes Cloud
-DevOps et amélioration continue
+## 🛠️ Technologies
 
-J'aimerais progresser dans différents langage de programmation (java...)
+### Automation & Infrastructure
 
-📚 Certifications
-ITIL® 4 Foundation
-Red Hat RH294 - Linux Automation with Ansible
-Certified Kubernetes Administrator (CKA)
-HashiCorp Terraform Associate
+- PowerShell
+- Ansible
+- Active Directory
 
-🌍 Langues
-Français : langue maternelle
-Anglais : C1 (utilisation quotidienne en contexte professionnel)
+### Monitoring & Observability
 
-⚠️ Avertissement
+- Grafana
+- InfluxDB
 
-Les projets présents dans ce portfolio sont des démonstrations techniques personnelles. Ils ne contiennent aucun code, donnée ou information confidentielle appartenant à mes clients ou à mon employeur.
+### Operating Systems
 
-📫 Contact
-
-N'hésitez pas à me contacter pour échanger autour des sujets DevOps, automatisation, observabilité ou administration système.
+- Windows Server
+- Red Hat Enterprise
