@@ -20,19 +20,6 @@ PowerShell
 Ansible
 Active Directory
 
-📂 Projets
-🔐 Monitoring des comptes de service
-
-Automatisation du contrôle des dates d'expiration de mots de passe de comptes de service Active Directory.
-
-Compétences mises en œuvre :
-
-PowerShell
-Active Directory
-Export de métriques
-Monitoring
-Grafana
-
 🎯 Ce qui m'intéresse
 
 Je m'intéresse particulièrement aux sujets suivants :
