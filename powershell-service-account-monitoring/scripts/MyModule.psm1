@@ -1,4 +1,4 @@
-#### THIS MODULE HAS NOT BEEN WRITTEN BY @marionprodeo ####
+#### THESE MODULES HAVE NOT BEEN WRITTEN BY @marionprodeo ####
 
 # -----------------------------------------------------------------------------------
 Function Info-Log {
