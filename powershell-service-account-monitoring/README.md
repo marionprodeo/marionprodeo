@@ -221,4 +221,4 @@ This monitoring solution was later extended with an Ansible automation workflow 
 - Updating Scheduled Tasks
 - Reducing manual intervention during password rotations
 
-See: ansible-password-update
+See: ansible-service-account-password-update
