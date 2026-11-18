@@ -204,14 +204,6 @@ Potential enhancements:
 
 ---
 
-## Disclaimer
-
-This project is a simplified and anonymized implementation inspired by real-world operational requirements.
-
-No confidential information, customer data or proprietary code from clients or employers are included.
-
----
-
 ## Related Project
 
 This monitoring solution was later extended with an Ansible automation workflow capable of:
@@ -222,3 +214,11 @@ This monitoring solution was later extended with an Ansible automation workflow 
 - Reducing manual intervention during password rotations
 
 See: ansible-service-account-password-update
+
+---
+
+## Disclaimer
+
+This project is a simplified and anonymized implementation inspired by real-world operational requirements.
+
+No confidential information, customer data or proprietary code from clients or employers are included.
