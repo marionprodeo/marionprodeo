@@ -159,6 +159,8 @@ The monitoring solution identifies accounts approaching password expiration and 
 
 The renewal playbook provides the remediation workflow by automatically updating dependent services and scheduled tasks after password rotation.
 
+See: powershell-service-account-monitoring
+
 ---
 
 ## Disclaimer
