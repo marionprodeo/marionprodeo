@@ -1,0 +1,39 @@
+# Example playbook demonstrating automated SQL Server restoration.
+# Simplified and anonymized version for portfolio purposes.
+
+- name: 'administration | DB restoration'
+  hosts: application_db
+  gather_facts: no
+  tasks:
+    - name: 'process | DB restoration'
+      win_shell: |
+        $Server = "localhost"
+        $Database = "{{ item }}"
+        $BackupFile = "path\to\{{ item }}.bak"
+        $User = "{{ sql.admin.user }}"
+        $Password = "{{ sql.admin.pwd }}"
+        $BakInfoQuery = "RESTORE FILELISTONLY FROM DISK = '$BackupFile';"
+        $BakFiles = Invoke-Sqlcmd -ServerInstance $Server -Query $BakInfoQuery -Username $User -Password $Password
+        $CurrentPathsQuery = "SELECT name, physical_name FROM sys.master_files WHERE database_id = DB_ID('$Database');"
+        $CurrentFiles = Invoke-Sqlcmd -ServerInstance $Server -Query $CurrentPathsQuery -Username $User -Password $Password
+        $MoveClauses = @()
+        foreach ($bakFile in $BakFiles) {
+            $targetFile = $CurrentFiles | Where-Object { $_.name -eq $bakFile.LogicalName }
+            if ($targetFile) {
+                $MoveClauses += "MOVE '$($bakFile.LogicalName)' TO '$($targetFile.physical_name)'"
+            } else {
+                Write-Warning "Logical file '$($bakFile.LogicalName)' not found in target dat."
+            }
+        }
+
+        $MoveScriptBlock = $MoveClauses -join ",`n"
+        $SqlQuery = "USE [master];`n" + "ALTER DATABASE [$Database] SET SINGLE_USER WITH ROLLBACK IMMEDIATE;`n" + "RESTORE DATABASE [$Database] FROM DISK = '$BackupFile'`n" + "WITH`n" + "$MoveScriptBlock,`n" + "REPLACE,`n" + "RECOVERY;`n" + "ALTER DATABASE [$Database] SET MULTI_USER;"
+        Invoke-Sqlcmd -ServerInstance $Server -Query $SqlQuery -Username $User -Password $Password
+      with_items:
+       - "{{ db1 }}"
+       - "{{ db2 }}"
+       - "{{ db3 }}"
+      ignore_errors: no
+
+#his excerpt illustrates the core restoration logic used to automate SQL Server recovery operations. 
+#The production implementation also included service orchestration, validation checks, logging and post-restoration verification steps.
